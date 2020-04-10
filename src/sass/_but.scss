@@ -1,0 +1,51 @@
+@mixin make-buton($backColor, $color) {
+    // Colorações Passadas pelo Mixin
+    color: $color;
+    background: $backColor;
+    border: 2.5px solid $backColor;
+    // Tamanho Setado Manualmente
+    margin: 0 1em 0;
+    width: 4.2em;
+    height: 4.2em;
+    border-radius: 40%;
+
+    // Resets do Click Padrão dos Navegadores (Só ativar se a região for interativa)
+    background-image: none;
+    -webkit-tap-highlight-color: transparent;
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
+    // Animações
+    transition-duration: 0.3s;
+    &:active {
+        background-color: white;
+        color: black;
+    }
+}
+
+@mixin make-small-button($backColor, $color) {
+    // Colorações Passadas pelo Mixin
+    color: $color;
+    background: $backColor;
+    border: 2.5px solid $backColor;
+    // Tamanho Setado Manualmente
+    margin: 0 1em 0;
+    width: 4.2em;
+    height: 2.3em;
+    border-radius: 16px;
+
+    // Resets do Click Padrão dos Navegadores (Só ativar se a região for interativa)
+    background-image: none;
+    -webkit-tap-highlight-color: transparent;
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
+    // Animações
+    transition-duration: 0.3s;
+    &:active {
+        background-color: white;
+        color: black;
+    }
+}

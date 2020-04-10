@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: o;
+  box-sizing: border-box;
+  touch-action: none;
+}
+
+.screen {
+  background-color: #2c2e31;
+  color: white;
+  height: 35vh;
+  width: 100%;
+  padding-top: 10px;
+}
+.screen p {
+  margin: 0px;
+  text-align: right;
+}
+.screen .tela1 {
+  font-size: 2.188em;
+}
+.screen .tela2 {
+  font-size: 3.125em;
+  padding-top: 0.5em;
+}
+
+.input {
+  background-color: #1d1e20;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+}
+.input .num {
+  color: white;
+  background: #555555;
+  border: 2.5px solid #555555;
+  margin: 0 1em 0;
+  width: 4.2em;
+  height: 4.2em;
+  border-radius: 40%;
+  background-image: none;
+  -webkit-tap-highlight-color: transparent;
+  transition-duration: 0.3s;
+}
+.input .num::-moz-focus-inner {
+  border: 0;
+}
+.input .num:active {
+  background-color: white;
+  color: black;
+}
+.input .opt {
+  color: white;
+  background: #ff9100;
+  border: 2.5px solid #ff9100;
+  margin: 0 1em 0;
+  width: 4.2em;
+  height: 4.2em;
+  border-radius: 40%;
+  background-image: none;
+  -webkit-tap-highlight-color: transparent;
+  transition-duration: 0.3s;
+}
+.input .opt::-moz-focus-inner {
+  border: 0;
+}
+.input .opt:active {
+  background-color: white;
+  color: black;
+}
+.input .clear {
+  color: black;
+  background: #e63437;
+  border: 2.5px solid #e63437;
+  margin: 0 1em 0;
+  width: 4.2em;
+  height: 4.2em;
+  border-radius: 40%;
+  background-image: none;
+  -webkit-tap-highlight-color: transparent;
+  transition-duration: 0.3s;
+}
+.input .clear::-moz-focus-inner {
+  border: 0;
+}
+.input .clear:active {
+  background-color: white;
+  color: black;
+}
+.input .remove {
+  color: white;
+  background: #555555;
+  border: 2.5px solid #555555;
+  margin: 0 1em 0;
+  width: 4.2em;
+  height: 4.2em;
+  border-radius: 40%;
+  background-image: none;
+  -webkit-tap-highlight-color: transparent;
+  transition-duration: 0.3s;
+}
+.input .remove::-moz-focus-inner {
+  border: 0;
+}
+.input .remove:active {
+  background-color: white;
+  color: black;
+}
+.input .equal {
+  color: black;
+  background: #00dc72;
+  border: 2.5px solid #00dc72;
+  margin: 0 1em 0;
+  width: 4.2em;
+  height: 4.2em;
+  border-radius: 40%;
+  background-image: none;
+  -webkit-tap-highlight-color: transparent;
+  transition-duration: 0.3s;
+}
+.input .equal::-moz-focus-inner {
+  border: 0;
+}
+.input .equal:active {
+  background-color: white;
+  color: black;
+}
+.input .linha {
+  color: white;
+  background: #555555;
+  border: 2.5px solid #555555;
+  margin: 0 1em 0;
+  width: 4.2em;
+  height: 2.3em;
+  border-radius: 16px;
+  background-image: none;
+  -webkit-tap-highlight-color: transparent;
+  transition-duration: 0.3s;
+}
+.input .linha::-moz-focus-inner {
+  border: 0;
+}
+.input .linha:active {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (min-width: 900px) {
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .calculadora {
+    width: 100vw;
+    margin-top: 7vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+  }
+
+  .screen {
+    width: 65vw;
+  }
+
+  .input {
+    height: 50vh;
+    width: 65vw;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
