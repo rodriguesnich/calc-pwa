@@ -1,4 +1,10 @@
-@import "but.scss";
+@import "but.scss", "toggle.scss";
+
+$color_checkbox_success:#4cd964;
+$color_checkbox_default:#8E8E93;
+$transition: .3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$width: 4.2em;
+$height: 2.1em;
 
 * {
     margin: 0;
@@ -98,3 +104,29 @@
         width: 65vw;
     }
 }
+
+
+
+
+
+.toggle{ 
+    .toggle-control{
+        @include make-toggle(4.2em, 2.1em, #4cd964, #8E8E93)
+    }
+
+    input{
+    display: none;
+    
+    &:checked + .toggle-control{
+      border-color: $color_checkbox_success;
+      background-color: $color_checkbox_success;
+      &:after{
+        left: $width/2;
+      }
+    }
+    }
+
+    .toggle_input{
+
+    }
+}  

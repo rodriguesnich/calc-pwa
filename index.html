@@ -31,21 +31,28 @@
         <div class="input flex-container">
 
             <div>
-                <button class="linha" type="button">|\</button>
+                
+                <button class="linha" onclick="pressParent('(')">(</button>
 
-                <button class="linha" onclick="pressParent('^')">^</button>
+                <button class="linha" onclick="pressParent(')')">)</button>
 
                 <button class="linha" type="button">%</button>
 
-                <button class="linha" type="button">?</button>
+                <button>
+                    <label class="label toggle">
+                        <input type="checkbox" class="toggle_input"/>
+                        <div class="toggle-control"></div>
+                    </label>
+                </button>
+
             </div>
 
             <div>
                 <button class="clear" onclick="clean()" id="limpa">C</button>
 
-                <button class="num" onclick="pressParent('(')">(</button>
+                <button class="num" type="button">+/-</button>
 
-                <button class="num" onclick="pressParent(')')">)</button>
+                <button class="num" onclick="pressOperator('^')">^</button>
 
                 <button class="opt" onclick="pressOperator('/')" id="opt">/</button>
             </div>
