@@ -44,6 +44,18 @@ function pressNum(number) {
     return display()
 }
 
+function plusMinus(){
+    if (isNaN(vetor[vetor.length-1])) {
+
+    }   else {
+        let a = Number(numBuffer) * -1
+        vetor[vetor.length-1] = a
+        numBuffer = a
+
+        return display()
+    }
+}
+
 function pressOperator(opt) {
     if (isNaN(vetor[vetor.length-1]) && vetor[vetor.length-1] != ')') {
         vetor[vetor.length-1] = opt
