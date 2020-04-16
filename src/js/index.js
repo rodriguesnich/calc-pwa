@@ -45,10 +45,19 @@ function pressNum(number) {
 }
 
 function pressOperator(opt) {
-    vetor.push(opt)
-    numBuffer = ''
+    if (isNaN(vetor[vetor.length-1]) && vetor[vetor.length-1] != ')') {
+        vetor[vetor.length-1] = opt
+        numBuffer = ''
 
-    return display()
+        return display()        
+    } else {
+        vetor.push(opt)
+        numBuffer = ''
+
+        return display()
+    }
+
+
 }
 
 function pressParent(paret) {

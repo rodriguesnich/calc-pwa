@@ -76,6 +76,27 @@ $height: 2.1em;
         @include make-small-button(#555555, white)
     }
 
+    .toggle { 
+        .toggle-control{
+            @include make-toggle(4.2em, 2.1em, #4cd964, #8E8E93)
+        }
+
+        input{
+        display: none;
+        
+        &:checked + .toggle-control{
+          border-color: $color_checkbox_success;
+          background-color: $color_checkbox_success;
+          &:after{
+            left: $width/2;
+          }
+        }
+        }
+
+        .toggle_input{
+
+        }
+    } 
 }
 
 @media screen and (min-width: 900px) {
@@ -105,28 +126,3 @@ $height: 2.1em;
     }
 }
 
-
-
-
-
-.toggle{ 
-    .toggle-control{
-        @include make-toggle(4.2em, 2.1em, #4cd964, #8E8E93)
-    }
-
-    input{
-    display: none;
-    
-    &:checked + .toggle-control{
-      border-color: $color_checkbox_success;
-      background-color: $color_checkbox_success;
-      &:after{
-        left: $width/2;
-      }
-    }
-    }
-
-    .toggle_input{
-
-    }
-}  
