@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: o;
+  font-weight: 900;
   box-sizing: border-box;
   touch-action: pan-y;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
@@ -59,7 +59,7 @@
   color: black;
 }
 .input .opt {
-  color: white;
+  color: black;
   background: #ff9100;
   border: 2.5px solid #ff9100;
   margin: 0 1em 0;
@@ -98,8 +98,8 @@
 }
 .input .remove {
   color: white;
-  background: #555555;
-  border: 2.5px solid #555555;
+  background: #7D7D7D;
+  border: 2.5px solid #7D7D7D;
   margin: 0 1em 0;
   width: 4.2em;
   height: 4.2em;
@@ -136,8 +136,8 @@
 }
 .input .linha {
   color: white;
-  background: #555555;
-  border: 2.5px solid #555555;
+  background: #373737;
+  border: 2.5px solid #373737;
   margin: 0 1em 0;
   width: 4.2em;
   height: 2.3em;
@@ -154,12 +154,32 @@
   color: black;
   outline: 0;
 }
+.input .linha2 {
+  color: white;
+  background: #414141;
+  border: 2.5px solid #414141;
+  margin: 0 1em 0;
+  width: 4.2em;
+  height: 4.2em;
+  border-radius: 40%;
+  background-image: none;
+  -webkit-tap-highlight-color: transparent;
+  transition-duration: 0.3s;
+}
+.input .linha2::-moz-focus-inner {
+  border: 0;
+}
+.input .linha2:active {
+  background-color: white;
+  color: black;
+}
 .input .switch {
   position: relative;
   top: -5px;
   display: inline-block;
   width: 56px;
   height: 30.6px;
+  margin: 0 13px;
 }
 .input .switch input {
   opacity: 0;

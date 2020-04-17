@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: o;
+    // font-size: 0px;
+    font-weight: 900;
     box-sizing: border-box;
     touch-action: pan-y;
 
@@ -51,7 +52,7 @@
     }
 
     .opt {
-        @include make-buton(#ff9100, white)
+        @include make-buton(#ff9100, black)
     }
 
     .clear {
@@ -59,7 +60,7 @@
     }
 
     .remove {
-        @include make-buton(#555555, white)
+        @include make-buton(#7D7D7D, white)
     }
 
     .equal {
@@ -67,7 +68,11 @@
     }
 
     .linha {
-        @include make-small-button(#555555, white)
+        @include make-small-button(#373737, white)
+    }
+
+    .linha2 {
+        @include make-buton(#414141 ,white)
     }
 
     .switch {
@@ -76,6 +81,8 @@
         display: inline-block;
         width: 56px;
         height: 30.6px;
+
+        margin: 0 13px;
 
         input {
             opacity: 0;
