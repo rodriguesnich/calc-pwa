@@ -1,10 +1,4 @@
-@import "but.scss", "toggle.scss";
-
-$color_checkbox_success:#4cd964;
-$color_checkbox_default:#8E8E93;
-$transition: .3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-$width: 4.2em;
-$height: 2.1em;
+@import "but.scss";
 
 * {
     margin: 0;
@@ -76,27 +70,68 @@ $height: 2.1em;
         @include make-small-button(#555555, white)
     }
 
-    .toggle { 
-        .toggle-control{
-            @include make-toggle(4.2em, 2.1em, #4cd964, #8E8E93)
+    .switch {
+        position: relative;
+        top: -5px;
+        margin: 0 13.33px;
+        display: inline-block;
+        width: 56px;
+        height: 30.66px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+
+    input {
+        &:checked + .slider {
+            background-color: #2196F3;
         }
 
-        input{
-        display: none;
-        
-        &:checked + .toggle-control{
-          border-color: $color_checkbox_success;
-          background-color: $color_checkbox_success;
-          &:after{
-            left: $width/2;
-          }
-        }
+        &:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
         }
 
-        .toggle_input{
-
+        &:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
         }
-    } 
+    }
+
+    .slider.round {
+        border-radius: 34px;
+
+        &:before {
+        border-radius: 50%;
+        }
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -125,4 +160,3 @@ $height: 2.1em;
         width: 65vw;
     }
 }
-
