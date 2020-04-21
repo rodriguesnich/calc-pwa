@@ -1,23 +1,18 @@
+var a = ''
 
-function display() {
+
+function displayConta() {
     const screen = document.getElementById('math')
 
-    if (vetor.length < 30) {
-        vetor.forEach(function(nome){
-            screenBuffer += `${nome} `
-        })
-        screen.innerHTML = `${screenBuffer}`
-    } else {
-        window.alert('número máximo de operações atingido');
-    }
+    screen.innerHTML = `${getConta()}`
 
-    screenBuffer = ''
+    conta =''
 }
 
-function displayResu(result) {
+function displayResu() {
     const screen = document.getElementById('result')
 
-    a = result.toString().length
+    a = getResult().toString().length
 
     if (a > 11) {
         screen.innerHTML = `${(result / 10**a).toFixed(4)}e${(a)}`

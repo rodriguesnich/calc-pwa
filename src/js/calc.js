@@ -1,9 +1,12 @@
+result = ''
+
 function calc() {
-	vetor.forEach(function(nome){
-    resuBuffer += `${nome} `
-    })
 
-    resuBuffer = math.evaluate(resuBuffer)
+    result = math.evaluate(getConta(conta))
 
-    return displayResu(resuBuffer)
+    return displayResu()
+}
+
+function getResult() {
+	return result
 }

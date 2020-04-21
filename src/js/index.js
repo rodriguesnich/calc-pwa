@@ -1,12 +1,9 @@
 
 // BUFFERS
 var numBuffer = ''
-var screenBuffer = ''
-var resuBuffer = ''
+var conta = ''
 // ARRAY
 var vetor = []
-
-var a = ''
 
 
 
@@ -25,7 +22,7 @@ function pressNum(number) {
         numBuffer += number
         vetor[vetor.length-1] = numBuffer
     }
-    return display()
+    return displayConta()
 }
 
 function plusMinus(){
@@ -36,7 +33,7 @@ function plusMinus(){
         vetor[vetor.length-1] = a
         numBuffer = a
 
-        return display()
+        return displayConta()
     }
 }
 
@@ -45,12 +42,12 @@ function pressOperator(opt) {
         vetor[vetor.length-1] = opt
         numBuffer = ''
 
-        return display()        
+        return displayConta()        
     } else {
         vetor.push(opt)
         numBuffer = ''
 
-        return display()
+        return displayConta()
     }
 
 }
@@ -67,7 +64,7 @@ function pressParent(paret) {
         vetor.push(paret)
     }
 
-    return display()
+    return displayConta()
 }
 
 // LIMPADOR
@@ -77,12 +74,28 @@ function clean() {
 
     vetor = []
     numBuffer = ''
-    screenBuffer = ''
+    conta = ''
     resuBuffer = ''
 }
 
 function softClean() {
     vetor.pop()
     
-    return display()
+    return displayConta()
+}
+
+function getConta() {
+    conta = ''
+
+    if (vetor.length < 30) {
+        vetor.forEach(function(nome){
+            conta += `${nome} `
+        })
+    } else {
+        window.alert('número máximo de operações atingido');
+    }
+
+
+
+    return conta
 }
