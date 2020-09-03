@@ -71,6 +71,11 @@
         @include make-small-button(#373737, white)
     }
 
+    .toggle-img {
+      width: 15px;
+      height: 15px;
+    }
+
     .linha2 {
         @include make-buton(#373737 ,white)
     }

@@ -154,6 +154,10 @@
   color: black;
   outline: 0;
 }
+.input .toggle-img {
+  width: 15px;
+  height: 15px;
+}
 .input .linha2 {
   color: white;
   background: #373737;
