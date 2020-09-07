@@ -30,6 +30,21 @@ function press(pressed) {
     // ñ é numero
     if (opt) {
       // se teve operador antes
+      let last = buffer.slice(buffer.length - 1)
+      if (pressed == "(" || pressed == ")" || pressed == "-") {
+        if (last != ")" || last != "-") {
+          return
+        } else {
+          buffer += pressed
+          conta.prop = buffer
+          return
+        }
+      }
+      if (conta.prop.slice(conta.prop.length - 1) == ")") {
+        buffer += pressed
+        conta.prop = buffer
+        return
+      }
       return
     } else {
       // se não teve operador antes

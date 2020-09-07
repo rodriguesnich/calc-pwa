@@ -21,8 +21,8 @@
 
       <div class="input flex-container">
         <div>
-          <button class="linha" onclick="press('(')" disabled>(</button>
-          <button class="linha" onclick="press(')')" disabled>)</button>
+          <button class="linha" onclick="press('(')">(</button>
+          <button class="linha" onclick="press(')')">)</button>
           <button class="linha" type="button" disabled>%</button>
           <button class="linha" onclick="colorSwitch()">
             <img class="toggle-img" src="src/img/dom.svg">
@@ -31,7 +31,7 @@
 
         <div>
           <button class="clear" onclick="clean()" id="limpa">C</button>
-          <button class="linha2" onclick="plusMinus()" disabled>+/-</button>
+          <button class="remove" onclick="softClean()"><<</button>
           <button class="linha2" onclick="press('^')">^</button>
           <button class="opt" onclick="press('/')" id="opt">/</button>
         </div>
@@ -60,7 +60,7 @@
         <div>
           <button class="num" onclick="press('.')">.</button>
           <button class="num" onclick="press(0)" id="zero">0</button>
-          <button class="remove" onclick="softClean()"><<</button>
+          <button class="num"></button>
           <button class="equal" onclick="calc()" id="igual">=</button>
         </div>
       </div>
