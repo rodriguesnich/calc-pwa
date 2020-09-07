@@ -1,9 +1,7 @@
 result = ''
 
 function calc() {
-
-    result = math.evaluate(getConta(conta))
-
+    result = math.evaluate(conta.prop)
     return displayResu()
 }
 

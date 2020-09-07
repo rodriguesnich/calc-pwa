@@ -14,10 +14,8 @@ function displayResu() {
 
     if (a > 11) {
         screen.innerHTML = `${(result / 10**a).toFixed(4)}e${(a)}`
-
     } else if (a > 11 && result < 1) {
         screen.innerHTML = result.toFixed(5)
-
     } else {
         screen.innerHTML = result
     }

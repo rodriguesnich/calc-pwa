@@ -1,6 +1,7 @@
 
 // BUFFERS
 var buffer = ''
+var opt = true
 
 // Objeto Conta
 const conta = {};
@@ -26,18 +27,31 @@ Object.defineProperty(conta, "prop", {
 function press(pressed) {
   console.log(isNaN(pressed));
   if (isNaN(pressed)) {
-    console.log('ñ é numero');
+    // ñ é numero
+    if (opt) {
+      // se teve operador antes
+      return
+    } else {
+      // se não teve operador antes
+      buffer += pressed
+      conta.prop = buffer
+      opt = true
+      return
+    }
   } else {
-    console.log('é numero');
+    // é numero
+    buffer += pressed
+    conta.prop = buffer
+    opt=false
   }
-  buffer += pressed
-  conta.prop = buffer
 }
 
 // LIMPADOR
 function clean() {
   buffer = ''
+  result = ''
   conta.prop = buffer
+  displayResu()
 }
 
 function softClean() {
