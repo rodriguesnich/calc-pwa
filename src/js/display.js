@@ -4,9 +4,7 @@ var a = ''
 function displayConta() {
     const screen = document.getElementById('math')
 
-    screen.innerHTML = `${getConta()}`
-
-    conta =''
+    screen.innerHTML = conta.prop
 }
 
 function displayResu() {
