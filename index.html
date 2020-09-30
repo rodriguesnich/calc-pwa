@@ -20,19 +20,19 @@
       </div>
 
       <div class="input flex-container">
-        <div>
-          <button class="linha" onclick="pressParent()">( )</button>
+        <!-- <div>
           <button class="linha" disabled> </button>
-          <button class="linha" type="button" disabled>%</button>
+          <button class="linha" disabled> </button>
+          <button class="linha" type="button" onclick="pressOpt('%')" >%</button>
           <button class="linha" onclick="colorSwitch()">
             <img class="toggle-img" src="src/img/dom.svg">
           </button>
-        </div>
+        </div> -->
 
         <div>
           <button class="clear" onclick="clean()" id="limpa">C</button>
-          <button class="remove" onclick="softClean()">/-</button>
-          <button class="linha2" onclick="press('^')">^</button>
+          <button class="linha2" onclick="pressParent()">(  )</button>
+          <button class="linha2" onclick="pressOpt('^')">^</button>
           <button class="opt" onclick="pressOpt('/')" id="opt">/</button>
         </div>
 

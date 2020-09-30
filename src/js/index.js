@@ -1,11 +1,10 @@
-
 // BUFFERS
 var buffer = ''
 var parent = false
 
 // Objeto Conta
-const conta = {};
-let value = '';
+const conta = {}
+let value = ''
 function fn(oldValue, newValue) {
   displayConta()
 }
@@ -15,24 +14,14 @@ Object.defineProperty(conta, "prop", {
     return value
   },
   set(val) {
-    value = val;
-    fn(value, val);
+    value = val
+    fn(value, val)
   }
 });
 
-function pressParent(par) {
-  let last = buffer.slice(buffer.length - 1)
-
-  if (parent === false) {
-    buffer += '('
-    conta.prop = buffer
-    parent = true
-  } else {
-    buffer += ')'
-    conta.prop = buffer
-    parent = false
-  }
-  // opt = false
+function pressNumber(number) {
+  buffer += number
+  conta.prop = buffer
 }
 
 function pressOpt(operator) {
@@ -43,14 +32,22 @@ function pressOpt(operator) {
   }
 }
 
-function pressMinus() {
-
+function pressParent(par) {
+  let last = buffer.slice(buffer.length - 1)
+  if (parent === false) {
+    buffer += '('
+    conta.prop = buffer
+    parent = true
+  } else {
+    buffer += ')'
+    conta.prop = buffer
+    parent = false
+  }
 }
 
-function pressNumber(number) {
-  buffer += number
-  conta.prop = buffer
-}
+// function pressMinus() {
+//
+// }
 
 // LIMPADOR
 function clean() {
