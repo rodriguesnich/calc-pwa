@@ -7,7 +7,7 @@
     // font-size: 0px;
     font-weight: 900;
     box-sizing: border-box;
-    touch-action: pan-y;
+    // touch-action: pan-y;
 
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
     -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
@@ -21,7 +21,7 @@
     height: 35vh;
     width: 100%;
     padding-top: 10px;
-
+    overflow: auto;
     p {
         margin: 0px;
         text-align: right;

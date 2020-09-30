@@ -1,15 +1,12 @@
 
 // BUFFERS
 var buffer = ''
-var opt = true
+var parent = false
 
 // Objeto Conta
 const conta = {};
-
 let value = '';
-
 function fn(oldValue, newValue) {
-  // console.log(`${oldValue} has been changed to ${newValue}`);
   displayConta()
 }
 
@@ -23,42 +20,36 @@ Object.defineProperty(conta, "prop", {
   }
 });
 
-//  BOTOES
-function press(pressed) {
-  console.log(isNaN(pressed));
-  if (isNaN(pressed)) {
-    // ñ é numero
-    if (opt) {
-      // se teve operador antes
-      let last = buffer.slice(buffer.length - 1)
-      if (pressed == "(" || pressed == ")" || pressed == "-") {
-        if (last != ")" || last != "-") {
-          return
-        } else {
-          buffer += pressed
-          conta.prop = buffer
-          return
-        }
-      }
-      if (conta.prop.slice(conta.prop.length - 1) == ")") {
-        buffer += pressed
-        conta.prop = buffer
-        return
-      }
-      return
-    } else {
-      // se não teve operador antes
-      buffer += pressed
-      conta.prop = buffer
-      opt = true
-      return
-    }
-  } else {
-    // é numero
-    buffer += pressed
+function pressParent(par) {
+  let last = buffer.slice(buffer.length - 1)
+
+  if (parent === false) {
+    buffer += '('
     conta.prop = buffer
-    opt=false
+    parent = true
+  } else {
+    buffer += ')'
+    conta.prop = buffer
+    parent = false
   }
+  // opt = false
+}
+
+function pressOpt(operator) {
+  let last = buffer.slice(buffer.length - 1)
+  if (isNaN(last) === false) {
+    buffer += operator
+    conta.prop = buffer
+  }
+}
+
+function pressMinus() {
+
+}
+
+function pressNumber(number) {
+  buffer += number
+  conta.prop = buffer
 }
 
 // LIMPADOR
