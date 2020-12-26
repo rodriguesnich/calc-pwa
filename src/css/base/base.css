@@ -1,0 +1,11 @@
+@import url(reset.css);
+@import url(_variable.css);
+
+body {
+    background-color: var(--preto-escuro);
+}
+
+.container {
+    padding-right: 6%;
+    padding-left: 6%;
+}

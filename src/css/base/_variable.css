@@ -1,0 +1,18 @@
+:root {
+    --branco: #FFFFFF;
+    --preto-escuro: #191C21;
+    --preto-claro: #252932;
+    --preto-medio: #292D36;
+    --cinza: #7A7A7A;
+    --verde-pscina: #25FFDA;
+    --rosa: #F47A79;
+  
+    
+    --font-header: 'Roboto', sans-serif;
+    --font-body:  'Ubuntu', serif;
+
+    --weight-calc: 300;
+    --weight-result: 700;
+    --weight-button: 500;
+  }
+  
