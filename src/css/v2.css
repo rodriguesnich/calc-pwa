@@ -9,6 +9,12 @@ header {
   color: var(--branco);
 }
 
+header button {
+  background-color: var(--preto-escuro);
+  border: none;
+  color: var(--branco);
+}
+
 header section {
   display: flex;
   width: 30vw;
@@ -24,6 +30,7 @@ header section button {
   background-color: var(--preto-medio);
   border: none;
   width: 100%;
+  color: var(--branco);
 }
 
 .sun {
@@ -40,7 +47,7 @@ header section button {
 }
 
 .keyboard {
-  height: 60vh;
+  height: 57vh;
   background-color: var(--preto-medio);
   padding-top: 1rem;
   border-radius: 30px 30px 0 0;
@@ -58,4 +65,5 @@ header section button {
   background-color: var(--preto-medio);
   border: none;
   padding: 30px;
+  color: var(--branco);
 }
