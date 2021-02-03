@@ -2,45 +2,50 @@ import React from 'react';
 
 import './style.css'
 
-import Button from '../Button';
 
 class Keyboard extends React.Component {
   constructor(props) {
   super(props);
+  this.state = {operation: ""};
   this.handleClick = this.handleClick.bind(this);
 }
 
-  handleClick = (e) => {
-    // e.preventDefault();
-    console.log("Hi there, user!");
+  handleClick = (e, value) => {
+    // value.preventDefault();
+    // console.log("Hi there, user!");
+    // console.log(value);
+    let buffer = this.state.operation += e
+    this.setState({operation: buffer})
+    console.log(this.state.operation);
   };
   render(){
     return (
       <div className="Keyboard">
-        <Button content="ac" />
-        <Button content="+-" />
-        <Button content="%" />
-        <Button content="/" />
+        <button className="Button">ac</button>
+        <button className="Button">+-</button>
+        <button className="Button">%</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "/")}>/</button>
 
-        <Button content="7" value="7"  onClick={this.handleClick} />
-        <Button content="8" value="8" />
-        <Button content="9" value="9" />
-        <Button content="x" />
+        <button className="Button" onClick={this.handleClick.bind(this, "7")}>7</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "8")}>8</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "9")}>9</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "*")}>x</button>
 
-        <Button content="4" value="4" />
-        <Button content="5" value="5" />
-        <Button content="6" value="6" />
-        <Button content="-" />
+        <button className="Button" onClick={this.handleClick.bind(this, "4")}>4</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "5")}>5</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "6")}>6</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "+")}>+</button>
 
-        <Button content="1" value="1" />
-        <Button content="2" value="2" />
-        <Button content="3" value="3" />
-        <Button content="+" />
+        <button className="Button" onClick={this.handleClick.bind(this, "1")}>1</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "2")}>2</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "3")}>3</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "-")}>-</button>
 
-        <Button content="r" />
-        <Button content="0" value="0" />
-        <Button content="." />
-        <Button content="=" />
+        <button className="Button">r</button>
+        <button className="Button" onClick={this.handleClick.bind(this, "0")}>0</button>
+        <button className="Button" onClick={this.handleClick.bind(this, ".")}>.</button>
+        <button className="Button">=</button>
+
       </div>
     );
 

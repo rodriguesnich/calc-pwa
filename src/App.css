@@ -1,0 +1,70 @@
+.Screen {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 40vh;
+}
+
+.operation {
+  background-color: var(--black);
+  color: white;
+  text-align: right;
+  border: none;
+  height: 30%;
+  font-size: 2.5rem;
+    resize: none;
+}
+
+.result {
+  background-color: var(--black);
+  color: white;
+  text-align: right;
+  border: none;
+  height: 40%;
+  font-size: 3.5rem;
+  resize: none;
+}
+
+
+.Keyboard {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: var(--light-black);
+  border-radius: 2.5rem 2.5rem 0 0;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 5px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  outline: none;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.Button {
+  max-width: 3.5rem;
+  max-height: 3.5rem;
+  background-color: var(--gray);
+  color: white;
+  border: none;
+  border-radius: .9rem;
+  padding: 1rem 1.25rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.4rem;
+  transition-timing-function: ease-in-out;
+}
+
+.Button:active{
+  background-color: white;
+  color: black;
+}
