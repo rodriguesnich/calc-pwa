@@ -12,7 +12,7 @@
   border: none;
   height: 30%;
   font-size: 2.5rem;
-    resize: none;
+  resize: none;
 }
 
 .result {
@@ -25,10 +25,9 @@
   resize: none;
 }
 
-
 .Keyboard {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   background-color: var(--light-black);
   border-radius: 2.5rem 2.5rem 0 0;
   height: 60vh;
@@ -57,14 +56,46 @@ textarea {
   background-color: var(--gray);
   color: white;
   border: none;
-  border-radius: .9rem;
+  border-radius: 0.9rem;
   padding: 1rem 1.25rem;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 1.4rem;
   transition-timing-function: ease-in-out;
 }
 
-.Button:active{
+.Button:active {
   background-color: white;
   color: black;
+}
+
+@media (min-width: 1281px) {
+  .App {
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    width: 70vw;
+
+    background-color: var(--light-black);
+
+    padding: 1rem;
+    border-radius: 25px;
+  }
+
+  .Keyboard {
+    height: 100%;
+    width: 40%;
+  }
+
+  .Screen {
+    height: 100%;
+    width: 60%;
+  }
+
+  .operation {
+    background: var(--light-black);
+  }
+
+  .result {
+    background: var(--light-black);
+  }
 }
