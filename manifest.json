@@ -1,25 +1,29 @@
 {
   "short_name": "Calc-Pwa",
-  "name": "2x2 != 5",
+  "name": "Calc-Pwa",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "calc-pwa-192.png",
+      "src": "./calc-pwa-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "calc-pwa-512.png",
+      "src": "./calc-pwa-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "icons": {
+       "16": "icon16.png",
+       "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff"
 }
