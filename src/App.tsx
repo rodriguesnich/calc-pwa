@@ -141,14 +141,15 @@ function App() {
         <div className="button-line">
           <button onClick={clear}>ac</button>
           <button onClick={handleParent}>( )</button>
-          <button onClick={calcPercent}><FaPercent /></button>
+          <button className="icon-button" onClick={calcPercent}><FaPercent /></button>
           <button onClick={() => addOperator("/")}><FaDivide /></button>
         </div>
         <div className="button-line">
           <button onClick={addNumber}>7</button>
           <button onClick={addNumber}>8</button>
           <button onClick={addNumber}>9</button>
-          <button onClick={() => addOperator("*")}><FaAsterisk /></button>
+          {/* <button onClick={() => addOperator("*")}><FaAsterisk /></button> */}
+          <button onClick={() => addOperator("*")}>X</button>
         </div>
         <div className="button-line">
           <button onClick={addNumber}>4</button>
