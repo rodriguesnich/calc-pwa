@@ -98,14 +98,19 @@
   padding: 1rem;
   margin: 1rem;
   border-radius: 10px;
-  font-size: 1.5rem;
-  font-family: "Libre Franklin", sans-serif;
   font-weight: 600;
 }
 
-.icon-button {
-  height: 1.5rem;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+.button-line .number {
+  font-size: 1.5rem;
+  font-family: "Libre Franklin", sans-serif;
+
+}
+
+.button-line .icon-button {
+  font-size: 0;
+}
+
+.button-line .icon-button img {
+  width: 1.5rem;
 }

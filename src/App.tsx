@@ -1,18 +1,13 @@
-import React, { useState, MouseEvent, useEffect } from "react";
+import React, { useState, MouseEvent } from "react";
 import { evaluate } from "mathjs";
 import "./App.css";
-import {
-  FaSun,
-  FaBackspace,
-  FaHistory,
-  FaMinus,
-  FaPlus,
-  FaEquals,
-  FaAsterisk,
-  FaDivide,
-  FaPercent,
-} from "react-icons/fa";
-
+import { FaSun, FaHistory } from "react-icons/fa";
+import backspace from "./img/backspace-solid.svg";
+import mult from "./img/times-solid.svg";
+import minus from "./img/minus-solid.svg";
+import plus from "./img/plus-solid.svg";
+import divide from "./img/divide-solid.svg";
+import percent from "./img/percentage-solid.svg";
 
 function App() {
   const [calculation, SetCalculation] = useState("");
@@ -32,7 +27,9 @@ function App() {
 
     return (
       <div className="Header">
-        <button onClick={toggleDark}><FaSun /></button>
+        <button onClick={toggleDark}>
+          <FaSun />
+        </button>
         <button onClick={toggleModal}>
           <FaHistory />
         </button>
@@ -139,43 +136,72 @@ function App() {
     return (
       <div className="Keyboard">
         <div className="button-line">
-          <button onClick={clear}>ac</button>
-          <button onClick={handleParent}>( )</button>
-          <button className="icon-button" onClick={calcPercent}><FaPercent /></button>
-          <button onClick={() => addOperator("/")}><FaDivide /></button>
-        </div>
-        <div className="button-line">
-          <button onClick={addNumber}>7</button>
-          <button onClick={addNumber}>8</button>
-          <button onClick={addNumber}>9</button>
-          {/* <button onClick={() => addOperator("*")}><FaAsterisk /></button> */}
-          <button onClick={() => addOperator("*")}>X</button>
-        </div>
-        <div className="button-line">
-          <button onClick={addNumber}>4</button>
-          <button onClick={addNumber}>5</button>
-          <button onClick={addNumber}>6</button>
-          <button onClick={() => addOperator("-")}>
-            <FaMinus />
+          <button onClick={clear} className="number">
+            ac
+          </button>
+          <button onClick={handleParent} className="number">
+            ( )
+          </button>
+          <button onClick={calcPercent} className="icon-button">
+            <img src={percent} />
+          </button>
+          <button onClick={() => addOperator("/")} className="icon-button">
+            <img src={divide} />
           </button>
         </div>
         <div className="button-line">
-          <button onClick={addNumber}>1</button>
-          <button onClick={addNumber}>2</button>
-          <button onClick={addNumber}>3</button>
-          <button onClick={() => addOperator("+")}>
-            <FaPlus />
+          <button onClick={addNumber} className="number">
+            7
+          </button>
+          <button onClick={addNumber} className="number">
+            8
+          </button>
+          <button onClick={addNumber} className="number">
+            9
+          </button>
+          <button onClick={() => addOperator("*")} className="icon-button">
+            <img src={mult} />
           </button>
         </div>
         <div className="button-line">
-          <button onClick={remove}>
-            <FaBackspace />
+          <button onClick={addNumber} className="number">
+            4
           </button>
-          <button onClick={addNumber}>0</button>
-          <button onClick={addNumber}>.</button>
-          <button onClick={result}>
-            <FaEquals />
+          <button onClick={addNumber} className="number">
+            5
           </button>
+          <button onClick={addNumber} className="number">
+            6
+          </button>
+          <button onClick={() => addOperator("-")} className="icon-button">
+            <img src={minus} alt="" />
+          </button>
+        </div>
+        <div className="button-line">
+          <button onClick={addNumber} className="number">
+            1
+          </button>
+          <button onClick={addNumber} className="number">
+            2
+          </button>
+          <button onClick={addNumber} className="number">
+            3
+          </button>
+          <button onClick={() => addOperator("+")} className="icon-button">
+            <img src={plus} alt="" />
+          </button>
+        </div>
+        <div className="button-line">
+          <button onClick={remove} className="icon-button">
+            <img src={backspace} alt="" />
+          </button>
+          <button onClick={addNumber} className="number">
+            0
+          </button>
+          <button onClick={addNumber} className="number">
+            .
+          </button>
+          <button onClick={result}>=</button>
         </div>
       </div>
     );
